@@ -10,8 +10,13 @@ public class DummyServiceTaskWorkItemHandler implements WorkItemHandler {
 
     @Override
     public void executeWorkItem(WorkItem workItem, WorkItemManager manager) {
+
         System.out.println("Work item being executed " + workItem);
+        //String firstParameter = (String)workItem.getParameter("FirstParameter");
+        //logger.info("first parameter: ",firstParameter);
+        //TODO
         manager.completeWorkItem(workItem.getId(), null);
+        
     }
 
     @Override
